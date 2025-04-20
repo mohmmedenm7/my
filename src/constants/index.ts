@@ -32,6 +32,7 @@ import {
   jobit,
   tripguide,
   threejs,
+
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -55,7 +56,7 @@ const services: TService[] = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "3D model",
     icon: mobile,
   },
   {
@@ -63,7 +64,7 @@ const services: TService[] = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Design",
     icon: creator,
   },
 ];
@@ -125,55 +126,55 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
+    title: "Photoshop",
+    companyName: "Images",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: " 2020 ",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I learned Photoshop a long time ago and learned all the tools .",
+      "Design a number of designs with a team .",
+      "I know the use of most of the tools in Photoshop.",
+      "I use it a lot to edit images or create images for the designs of the sites that I work on.",
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
+    title: "Figma ",
+    companyName: "UI & UX",
+    icon: figma,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: " 2021 ",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I learned Figma a while ago and learned how to build great user interfaces through it.",
+      "I worked on a number of projects using Figma .",
+      
+      "I use it a lot to build interfaces for sites of all sizes (desktop - mobile - tablet).",
     ],
   },
   {
-    title: "Web Developer",
-    companyName: "Shopify",
-    icon: shopify,
+    title: "React,js ",
+    companyName: "Node.js Developer",
+    icon: reactjs,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: " 2023 ",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I learned React to ensure the design of interactive and stable websites .",
+      "I use React because it is the most powerful Fremore in designing the user interfaces and interacting with the user in real time.",
+      "Designed a number of responsive and powerful websites .",
+      " I can partner in code review and provide honest constructive feedback to other developers.",
     ],
   },
   {
-    title: "Full stack Developer",
-    companyName: "Meta",
+    title: "blender ",
+    companyName: "3D",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: " 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I learned blinder to be able to deal with the 3D model.",
+      "I combine 3D cubes in most designs so that I can get amazing shapes and reach good designs.",
+      "I put some animation to my work to be more clear of ideas.",
+     
     ],
   },
 ];
@@ -207,16 +208,16 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "AVinar",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "An online training platform designed to provide learners with the necessary skills across various fields, featuring a clean and user-friendly interface that anyone can navigate with ease.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "supabase",
         color: "green-text-gradient",
       },
       {
@@ -225,49 +226,49 @@ const projects: TProject[] = [
       },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/mohmmedenm7/AVinarcenter",
   },
   {
-    name: "Job IT",
+    name: " Friendly",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An e-commerce platform tailored for the upper-class market, offering a clean and elegant interface with luxurious color schemes for a refined shopping experience.",
     tags: [
       {
-        name: "react",
+        name: "html ",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "js",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/mohmmedenm7/Friendly",
   },
   {
-    name: "Trip Guide",
+    name: "Sud-Hub",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A platform focused on delivering education in conflict zones. It aims to offer digital learning through summarized content that remains accessible even with limited internet connectivity.",
     tags: [
       {
-        name: "nextjs",
+        name: "html",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "css",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "js",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/",
+    sourceCodeLink: "https://github.com/mohmmedenm7/Sud-Hub.github.io",
   },
 ];
 

@@ -77,11 +77,14 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+      <div className="project-slider relative mt-20 overflow-hidden">
+  <div className="project-track flex w-max animate-scroll gap-7">
+    {projects.concat(projects).map((project, index) => (
+      <ProjectCard key={`project-${index}`} index={index} {...project} />
+    ))}
+  </div>
+</div>
+
     </>
   );
 };
