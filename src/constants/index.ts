@@ -26,8 +26,7 @@ import {
   docker,
   meta,
   starbucks,
-  tesla,
-  shopify,
+
   carrent,
   jobit,
   tripguide,
