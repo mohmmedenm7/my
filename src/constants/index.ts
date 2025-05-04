@@ -6,7 +6,7 @@ import type {
   TTestimonial,
   TProject,
 } from "../types";
-
+import cudu from "../assets/cudu.jpeg";
 import {
   mobile,
   backend,
@@ -269,6 +269,25 @@ const projects: TProject[] = [
     image: tripguide,
     sourceCodeLink: "https://github.com/mohmmedenm7/Sud-Hub.github.io",
   },
+
+  {
+    name: "cudu",
+    description: "A simple project to test layout and UI/UX ideas.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    image: cudu,
+    sourceCodeLink: "https://github.com/yourusername/cudu",
+  }
+  
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
