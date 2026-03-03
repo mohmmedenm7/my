@@ -121,59 +121,63 @@ const technologies: TTechnology[] = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "Photoshop",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
+  },
+  {
+    name: "Illustrator",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
+  },
 ];
 
 const experiences: TExperience[] = [
   {
-    title: "Photoshop",
-    companyName: "Images",
+    title: "Adobe Photoshop",
+    companyName: "Graphic Design",
     icon: starbucks,
     iconBg: "#383E56",
-    date: " 2020 ",
+    date: "Basics",
     points: [
-      "I learned Photoshop a long time ago and learned all the tools .",
-      "Design a number of designs with a team .",
-      "I know the use of most of the tools in Photoshop.",
-      "I use it a lot to edit images or create images for the designs of the sites that I work on.",
+      "Familiar with image editing and retouching.",
+      "Basic knowledge of layers and masks.",
+      "Can design simple social media graphics.",
     ],
   },
   {
-    title: "Figma ",
-    companyName: "UI & UX",
+    title: "Figma",
+    companyName: "UI/UX Design",
     icon: figma,
     iconBg: "#E6DEDD",
-    date: " 2021 ",
+    date: "Basics",
     points: [
-      "I learned Figma a while ago and learned how to build great user interfaces through it.",
-      "I worked on a number of projects using Figma .",
-      
-      "I use it a lot to build interfaces for sites of all sizes (desktop - mobile - tablet).",
+      "Can create simple user interfaces.",
+      "Basic understanding of prototyping.",
+      "Familiar with design tools and layouts.",
     ],
   },
   {
-    title: "React,js ",
-    companyName: "Node.js Developer",
+    title: "React.js",
+    companyName: "Web Development",
     icon: reactjs,
     iconBg: "#383E56",
-    date: " 2023 ",
+    date: "Basics",
     points: [
-      "I learned React to ensure the design of interactive and stable websites .",
-      "I use React because it is the most powerful Fremore in designing the user interfaces and interacting with the user in real time.",
-      "Designed a number of responsive and powerful websites .",
-      " I can partner in code review and provide honest constructive feedback to other developers.",
+      "Basic understanding of component-based development.",
+      "Can build simple web pages.",
+      "Familiar with modern JavaScript basics.",
     ],
   },
   {
-    title: "blender ",
-    companyName: "3D",
+    title: "Blender",
+    companyName: "3D Modeling",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: " 2023",
+    date: "Basics",
     points: [
-      "I learned blinder to be able to deal with the 3D model.",
-      "I combine 3D cubes in most designs so that I can get amazing shapes and reach good designs.",
-      "I put some animation to my work to be more clear of ideas.",
-     
+      "Basic knowledge of 3D modeling.",
+      "Simple texturing and shading.",
+      "Familiar with Blender's core tools.",
     ],
   },
 ];
@@ -207,9 +211,9 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
-    name: "AVinar",
+    name: "Educational Platform Template",
     description:
-      "An online training platform designed to provide learners with the necessary skills across various fields, featuring a clean and user-friendly interface that anyone can navigate with ease.",
+      "A ready-to-use template for online training platforms. Designed to provide a smooth learning experience with a clean, professional interface for any educational field.",
     tags: [
       {
         name: "react",
@@ -225,12 +229,12 @@ const projects: TProject[] = [
       },
     ],
     image: carrent,
-    sourceCodeLink: "https://github.com/mohmmedenm7/AVinarcenter",
+    sourceCodeLink: "https://avinarcenter.vercel.app/",
   },
   {
-    name: " Friendly",
+    name: "Premium E-commerce Template",
     description:
-      "An e-commerce platform tailored for the upper-class market, offering a clean and elegant interface with luxurious color schemes for a refined shopping experience.",
+      "A luxurious e-commerce model tailored for high-end markets. Offers an elegant shopping interface with premium color schemes to elevate your brand's presence.",
     tags: [
       {
         name: "html ",
@@ -246,12 +250,12 @@ const projects: TProject[] = [
       },
     ],
     image: jobit,
-    sourceCodeLink: "https://github.com/mohmmedenm7/Friendly",
+    sourceCodeLink: "https://mohmmedenm7.github.io/Friendly/",
   },
   {
-    name: "Sud-Hub",
+    name: "Digital Learning Template",
     description:
-      "A platform focused on delivering education in conflict zones. It aims to offer digital learning through summarized content that remains accessible even with limited internet connectivity.",
+      "A multi-purpose digital learning template focus on accessibility and performance. Perfect for delivering educational content efficiently across all connectivity levels.",
     tags: [
       {
         name: "html",
@@ -267,7 +271,7 @@ const projects: TProject[] = [
       },
     ],
     image: tripguide,
-    sourceCodeLink: "https://github.com/mohmmedenm7/Sud-Hub.github.io",
+    sourceCodeLink: "https://mohmmedenm7.github.io/Sud-Hub.github.io/",
   },
 
   {
@@ -285,9 +289,35 @@ const projects: TProject[] = [
     ],
     image: cudu,
     sourceCodeLink: "https://github.com/yourusername/cudu",
+  },
+  {
+    name: "Photoshop Design",
+    description: "A professional graphic design project created using Adobe Photoshop, showcasing advanced photo manipulation and layout techniques.",
+    tags: [
+      {
+        name: "photoshop",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "illustrator",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: "/WhatsApp Image 2026-01-19 at 1.57.50 PM.jpeg",
+    sourceCodeLink: "/WhatsApp Image 2026-01-19 at 1.57.50 PM.jpeg",
+  },
+  {
+    name: "Illustrator Illustration",
+    description: "A professional vector illustration created using Adobe Illustrator, showcasing clean lines and detailed artistic work.",
+    tags: [
+      {
+        name: "illustrator",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: "/475675908_1165417605017901_7490700744142970881_n.jpg",
+    sourceCodeLink: "/475675908_1165417605017901_7490700744142970881_n.jpg",
   }
-  
-  
 ];
 
 export { services, technologies, experiences, testimonials, projects };

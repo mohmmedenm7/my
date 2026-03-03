@@ -9,6 +9,8 @@ import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 import { TProject } from "../../types";
 
+import { technologies } from "../../constants";
+
 const ProjectCard: React.FC<{ index: number } & TProject> = ({
   index,
   name,
@@ -18,47 +20,59 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   sourceCodeLink,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        glareEnable
-        tiltEnable
-        tiltMaxAngleX={30}
-        tiltMaxAngleY={30}
-        glareColor="#aaa6c3"
-      >
-        <div className="bg-tertiary w-full rounded-2xl p-5 sm:w-[300px]">
-          <div className="relative h-[230px] w-full">
-            <img
-              src={image}
-              alt={name}
-              className="h-full w-full rounded-2xl object-cover"
-            />
-            <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="relative group cursor-pointer overflow-hidden rounded-lg h-[280px]"
+      onClick={() => window.open(sourceCodeLink, "_blank")}
+    >
+      <img
+        src={image}
+        alt={name}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+
+      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+        <h3 className="text-white font-bold text-[24px] mb-4">{name}</h3>
+
+        <div className="flex flex-wrap justify-center gap-3">
+          {tags.map((tag) => {
+            const tech = technologies.find(
+              (t) => t.name.toLowerCase().includes(tag.name.toLowerCase()) ||
+                tag.name.toLowerCase().includes(t.name.toLowerCase())
+            );
+
+            return (
               <div
-                onClick={() => window.open(sourceCodeLink, "_blank")}
-                className="black-gradient flex h-10 w-10 cursor-pointer items-center justify-center rounded-full"
+                key={`${name}-${tag.name}`}
+                className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center p-2 border border-white/20 hover:scale-110 transition-transform"
+                title={tag.name}
               >
-                <img
-                  src={github}
-                  alt="github"
-                  className="h-1/2 w-1/2 object-contain"
-                />
+                {tech ? (
+                  <img
+                    src={tech.icon}
+                    alt={tag.name}
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  <span className="text-[10px] text-white font-bold uppercase">
+                    {tag.name.slice(0, 2)}
+                  </span>
+                )}
               </div>
-            </div>
-          </div>
-          <div className="mt-5">
-            <h3 className="text-[24px] font-bold text-white">{name}</h3>
-            <p className="text-secondary mt-2 text-[14px]">{description}</p>
-          </div>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-                #{tag.name}
-              </p>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </Tilt>
+
+        <p className="mt-4 text-white/80 text-[12px] line-clamp-2 max-w-[200px]">
+          {description}
+        </p>
+
+        <button
+          className="mt-6 bg-white text-primary font-bold py-2 px-6 rounded-full hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
+        >
+          Preview Template
+        </button>
+      </div>
     </motion.div>
   );
 };
@@ -66,27 +80,29 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 const Works = () => {
   return (
     <>
-      <Header useMotion={true} {...config.sections.works} />
+      <Header
+        useMotion={true}
+        {...config.sections.works}
+        titleColor="text-primary"
+        subtitleColor="text-black/60"
+      />
 
-      <div className="flex w-full">
+      <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
+          className="mt-3 text-black/70 text-[17px] max-w-3xl leading-[30px]"
         >
           {config.sections.works.content}
         </motion.p>
       </div>
 
-      <div className="project-slider relative mt-20 overflow-hidden">
-  <div className="project-track flex w-max animate-scroll gap-7">
-    {projects.concat(projects).map((project, index) => (
-      <ProjectCard key={`project-${index}`} index={index} {...project} />
-    ))}
-  </div>
-</div>
-
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
+        ))}
+      </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work", "bg-white");

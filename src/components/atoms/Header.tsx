@@ -8,13 +8,21 @@ interface IHeader {
   useMotion: boolean;
   p: string;
   h2: string;
+  titleColor?: string;
+  subtitleColor?: string;
 }
 
-export const Header: React.FC<IHeader> = ({ useMotion, p, h2 }) => {
+export const Header: React.FC<IHeader> = ({
+  useMotion,
+  p,
+  h2,
+  titleColor = "text-white",
+  subtitleColor = "text-secondary",
+}) => {
   const Content = () => (
     <>
-      <p className={styles.sectionSubText}>{p}</p>
-      <h2 className={styles.sectionHeadText}>{h2}</h2>
+      <p className={`${styles.sectionSubText} ${subtitleColor}`}>{p}</p>
+      <h2 className={`${styles.sectionHeadText} ${titleColor}`}>{h2}</h2>
     </>
   );
 

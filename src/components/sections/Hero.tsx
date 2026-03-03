@@ -1,24 +1,76 @@
 import { motion } from "framer-motion";
 import { styles } from "../../constants/styles";
 import { config } from "../../constants/config";
+import { projects } from "../../constants";
 
 const Hero = () => {
   return (
-    <section className="relative mx-auto h-screen w-full bg-hero-pattern bg-cover bg-center bg-no-repeat text-white overflow-hidden">
+    <section className="relative mx-auto h-screen w-full bg-[#050816] text-white overflow-hidden flex items-center justify-center">
+      {/* Background Scrolling Works */}
+      <div className="absolute inset-0 z-0 opacity-10 overflow-hidden pointer-events-none">
+        <div className="flex flex-col gap-4 rotate-12 scale-150">
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="flex gap-4 w-max"
+          >
+            {projects.slice(0, 3).map((project, i) => (
+              <img
+                key={i}
+                src={project.image}
+                alt=""
+                className="w-80 h-48 object-cover rounded-xl"
+              />
+            ))}
+            {projects.slice(0, 3).map((project, i) => (
+              <img
+                key={`dup-${i}`}
+                src={project.image}
+                alt=""
+                className="w-80 h-48 object-cover rounded-xl"
+              />
+            ))}
+          </motion.div>
+          <motion.div
+            animate={{ x: ["-50%", "0%"] }}
+            transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+            className="flex gap-4 w-max"
+          >
+            {projects.slice(0, 3).reverse().map((project, i) => (
+              <img
+                key={i}
+                src={project.image}
+                alt=""
+                className="w-80 h-48 object-cover rounded-xl"
+              />
+            ))}
+            {projects.slice(0, 3).reverse().map((project, i) => (
+              <img
+                key={`dup-rev-${i}`}
+                src={project.image}
+                alt=""
+                className="w-80 h-48 object-cover rounded-xl"
+              />
+            ))}
+          </motion.div>
+        </div>
+        <div className="absolute inset-0 bg-[#050816]/60" />
+      </div>
+
       {/* Centered Content */}
       <div className="flex flex-col items-center justify-center h-full gap-8 z-10">
         {/* Image with Glow */}
         <div className="relative flex justify-center items-center">
-          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl relative z-10">
+          <div className="w-64 h-64 rounded-3xl overflow-hidden border-4 border-white shadow-2xl relative z-10">
             <img
-              src="/my photo.jpeg" // ✅ Replace with your image
+              src="/WhatsApp Image 2026-01-19 at 9.23.54 AM.jpeg"
               alt="My Photo"
               className="w-full h-full object-cover"
             />
           </div>
 
           {/* Glow behind image */}
-          <div className="absolute w-[320px] h-[320px] bg-gradient-to-b from-[#ffffff33] to-transparent rounded-full blur-3xl animate-pulse z-0" />
+          <div className="absolute w-[320px] h-[320px] bg-gradient-to-b from-[#915EFF33] to-transparent rounded-3xl blur-3xl animate-pulse z-0" />
         </div>
 
         {/* Text */}
@@ -31,19 +83,6 @@ const Hero = () => {
             {config.hero.p[1]}
           </p>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 w-full flex justify-center z-20">
-        <a href="#about">
-          <div className="border-secondary flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 p-2">
-            <motion.div
-              animate={{ y: [0, 24, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-              className="bg-secondary mb-1 h-3 w-3 rounded-full"
-            />
-          </div>
-        </a>
       </div>
     </section>
   );

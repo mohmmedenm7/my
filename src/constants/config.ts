@@ -67,28 +67,20 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in Figma and
-      Photoshop, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I specialize in providing ready-made, high-quality digital templates and interactive solutions designed to kickstart your project. From professional e-commerce models to advanced educational platforms, I offer pre-designed, scalable, and user-friendly systems that solve real-world needs. Browse our collection and select the perfect model to bring your vision to life instantly.`,
     },
     experience: {
-      p: "What I have done so far",
-      h2: "My Tools.",
+      p: "What I Know",
+      h2: "Skills.",
     },
     feedbacks: {
       p: "What others say",
       h2: "Testimonials.",
     },
     works: {
-      p: "My work",
-      h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+      p: "Selection",
+      h2: "Templates.",
+      content: `The following ready-made templates are available for you to choose from. Each model is designed with specific features and styles, allowing you to select the one that best fits your vision and requirements.`,
     },
   },
 };

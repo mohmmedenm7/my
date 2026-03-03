@@ -9,10 +9,11 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { config } from "./constants/config";
+
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 
 const App = () => {
   useEffect(() => {
@@ -30,12 +31,13 @@ const App = () => {
         </div>
         <About />
         <Experience />
-        <Tech />
         <Works />
-       
+
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
+          <Suspense fallback={null}>
+            <StarsCanvas />
+          </Suspense>
         </div>
       </div>
     </BrowserRouter>
